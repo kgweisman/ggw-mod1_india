@@ -44,13 +44,18 @@ h2 {
 	margin-top: 5px;
 }
 
+h2#comp-check-header {
+	font-size: 18px;
+	color: black;
+}
+
 .fun-text {
 	text-align: center;
-	font-size: 18px;
+	font-size: 17px;
 }
 
 .fun-text#survey-descrip {
-	width: 400px;
+	width: 500px;
 	margin: 20px auto 20px auto;
 	text-align: justify;
 }
@@ -67,6 +72,13 @@ h2 {
 	font-weight: 500;
 	color: darkred;
 	/*font-size: 20px;*/
+}
+
+.fun-text#comp-check-question {
+	width: 450px;
+	margin: 20px auto 20px auto;
+	text-align: justify;
+	font-size: 16px;
 }
 
 .fun-text#ranking-intro {
@@ -185,6 +197,9 @@ img {
 
 /*spacing between parts of demographics form*/
 .control-group {
-	margin-bottom: 30px;
+	margin: 30px auto 30px auto;
+	width: 70%;
+    border: dotted darkred 2px;
+    padding: 15px;
 }
 
