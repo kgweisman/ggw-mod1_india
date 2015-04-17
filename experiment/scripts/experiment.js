@@ -14,6 +14,7 @@ var experiment = {
 		condIntroOrder: [],
 		condition: "",
 		wording: "",
+		comprehensionCheck: "",
 
 		// demographic information about participant
 		age: "",

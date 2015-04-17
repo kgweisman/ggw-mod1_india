@@ -29,14 +29,14 @@ addCondition("Joy", "experiencing joy");
 // addCondition("Self-Control", "exercising self-restraint over desires, emotions, or impulses");
 // addCondition("Thought", "thinking");
 
-// set up button behaviors for surveys slide
+// set up button behaviors for surveys slide: happens in compcheck.js
 
-$('.slide#surveys button').click(function() { // select condition
-	experiment.newData.condition = surveysSlide.condition.condName;
-	experiment.newData.wording = surveysSlide.condition.wording;
-	experiment.next();
-	window.scrollTo(0, 0);
-});
+// $('.slide#surveys button').click(function() { // select condition
+// 	experiment.newData.condition = surveysSlide.condition.condName;
+// 	experiment.newData.wording = surveysSlide.condition.wording;
+// 	experiment.next();
+// 	window.scrollTo(0, 0);
+// });
 
 // set up how to display surveys slide
 
