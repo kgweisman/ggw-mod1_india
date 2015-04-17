@@ -195,8 +195,12 @@ img {
 	padding: 5px!important;
 }
 
-/*spacing between parts of demographics form*/
+/*styling of comprehension check and demographics form*/
 .control-group {
+	margin-bottom: 30px;
+}
+
+.control-group#comp-check-form {
 	margin: 30px auto 30px auto;
 	width: 70%;
     border: dotted darkred 2px;
