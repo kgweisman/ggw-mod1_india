@@ -78,7 +78,7 @@ h2#comp-check-header {
 	width: 450px;
 	margin: 20px auto 20px auto;
 	text-align: justify;
-	font-size: 16px;
+	font-size: 15px;
 }
 
 .fun-text#ranking-intro {
@@ -200,6 +200,7 @@ img {
 	margin: 30px auto 30px auto;
 	width: 70%;
     border: dotted darkred 2px;
+    background-color: rgb(245,245,250);
     padding: 15px;
 }
 
