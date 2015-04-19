@@ -9,17 +9,11 @@ var attempts = [];
 $('.slide#surveys button').click(function() {
 
 	// store condition
-	var keyCondName;
-	if (surveysSlide.condition.condName === "Emotion Recognition") {
-		keyCondName = "emotionRecognition";
-	} else if (surveysSlide.condition.condName === "Self-Control") {
-		keyCondName = "selfControl";
-	} else {
-		keyCondName = surveysSlide.condition.condName.toLowerCase();
-	}
+	var keyCondName = surveysSlide.condition.condName.toLowerCase().replace(/\s+/g, '');
 
 	// store answer
-	var answer = $('input[name=compCheck]:checked', '#comp-check-form').val();
+	var answer = $('input[type="radio"]:checked', '#comp-check-form').val();
+	console.log(answer);
 
 	if (answer === undefined) {
 
