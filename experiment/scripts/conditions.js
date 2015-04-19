@@ -106,12 +106,21 @@ while (choiceIndices.length > 0) {
 	var chosenConditionRadio = randomElementNR(conditionsList); 
 	var chosenIndexRadio = randomElementNR(choiceIndices);
 
-	while ((surveysSlide.condition === "Joy" && chosenConditionRadio.condName === "Pleasure") || (surveysSlide.conditionsList === "Pleasure" && chosenConditionRadio.condName === "Joy")) {
-		chosenConditionRadio = randomElementNR(conditionsList);
-	}
+	if (surveysSlide.condition.condName === "Joy" || 
+		surveysSlide.condition.condName === "Pleasure" || 
+		surveysSlide.condition.condName === "Pride") {
+		while (chosenConditionRadio.condName === "Joy" ||
+			chosenConditionRadio.condName === "Pleasure" ||
+			chosenConditionRadio.condName === "Pride") {
+			chosenConditionRadio = randomElementNR(conditionsList);
+		}
+		$('#comp-check-choices label').eq(chosenIndexRadio).append(chosenConditionRadio.compCheckText);
+		$('#comp-check-choices input').eq(chosenIndexRadio).val(chosenConditionRadio.condName.toLowerCase().replace(/\s+/g, ''));				
+	} else {
+		$('#comp-check-choices label').eq(chosenIndexRadio).append(chosenConditionRadio.compCheckText);
+		$('#comp-check-choices input').eq(chosenIndexRadio).val(chosenConditionRadio.condName.toLowerCase().replace(/\s+/g, ''));		
 
-	$('#comp-check-choices label').eq(chosenIndexRadio).append(chosenConditionRadio.compCheckText);
-	$('#comp-check-choices input').eq(chosenIndexRadio).val(chosenConditionRadio.condName.toLowerCase().replace(/\s+/g, ''));
+	}
 }
 
 $('.slide#surveys span#survey-descrip1').text(surveysSlide.condition.condName)
