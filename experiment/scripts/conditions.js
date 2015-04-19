@@ -105,6 +105,11 @@ $('#comp-check-choices input').eq(chosenIndex).val(surveysSlide.condition.condNa
 while (choiceIndices.length > 0) {
 	var chosenConditionRadio = randomElementNR(conditionsList); 
 	var chosenIndexRadio = randomElementNR(choiceIndices);
+
+	while ((surveysSlide.condition === "Joy" && chosenConditionRadio.condName === "Pleasure") || (surveysSlide.conditionsList === "Pleasure" && chosenConditionRadio.condName === "Joy")) {
+		chosenConditionRadio = randomElementNR(conditionsList);
+	}
+
 	$('#comp-check-choices label').eq(chosenIndexRadio).append(chosenConditionRadio.compCheckText);
 	$('#comp-check-choices input').eq(chosenIndexRadio).val(chosenConditionRadio.condName.toLowerCase().replace(/\s+/g, ''));
 }
